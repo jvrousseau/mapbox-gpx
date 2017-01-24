@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.31.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoianZyb3Vzc2VhdSIsImEiOiJYYUNlcVRZIn0.lp0867Jn5ynlj72kMwICSA';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/jvrousseau/ciy9j2gxx00292rp7ut7s9cas',
+    zoom: 13,
+    pitch: 45,
+    center: [-97.5164, 35.4876]
+});
+
+map.on('load', function () {
+  map.addLayer({
+      'id': 'upload-run',
+      'type': 'fill-extrusion',
+      'source': {
+          type: 'vector',
+          url: 'mapbox://jvrousseau.upload-run'
+      },
+      'source-layer': 'upload-run',
+      'paint': {
+          'fill-extrusion-color': {
+            'property': 'heartRates',
+            'stops': [
+                [0, '#e7d9da'],
+                [123, '#e5c1c1'],
+                [153, '#d9a7a8'],
+                [169, '#fb0017'],
+                [184, '#b40312']
+            ] 
+          },
+          'fill-extrusion-opacity': 0.65,
+          'fill-extrusion-height': {
+            'property': 'elevation',
+            'type': 'identity'
+          },
+          'fill-extrusion-base': 0
+      }
+  });
+});
+</script>
+
+</body>
+</html>

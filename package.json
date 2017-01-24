@@ -1,0 +1,20 @@
+{
+  "name": "mapbox-strava-gpx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jordan Rousseau",
+  "license": "ISC",
+  "dependencies": {
+    "@mapbox/togeojson": "^0.16.0",
+    "@turf/meta": "^3.7.5",
+    "@turf/turf": "^3.7.7",
+    "aws-sdk": "^2.7.27",
+    "lodash": "^4.17.4",
+    "mapbox": "^1.0.0-beta5",
+    "xmldom": "^0.1.27"
+  }
+}
