@@ -8,4 +8,4 @@
  `MAPBOX_USER={username} MAPBOX_TOKEN={private-token**} cat run.gpx | node index.js` 
  
  
- ** - this needs to have write access to your Mapbox account
+ ** - the private token needs to have write access to your Mapbox account
