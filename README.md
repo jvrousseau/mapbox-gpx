@@ -5,7 +5,7 @@
  ## usage
  
  
- `MAPBOX_USER={username} MAPBOX_TOKEN={private-token**} cat run.gpx | node index.js` 
+ `cat run.gpx | MAPBOX_USER={username} MAPBOX_TOKEN={private-token**} node index.js` 
  
  
  ** - the private token needs to have write access to your Mapbox account
