@@ -25,6 +25,12 @@ var map = new mapboxgl.Map({
     center: [-97.5164, 35.4876]
 });
 
+if (window.self !== window.top) {
+  map.scrollZoom.disable();
+}
+
+map.addControl(new mapboxgl.NavigationControl());
+
 map.on('load', function () {
   map.addLayer({
       'id': 'upload-run',
