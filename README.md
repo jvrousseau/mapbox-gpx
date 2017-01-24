@@ -1,6 +1,6 @@
-# Strava GPX -> Mapbox Tileset Conversion
+# GPX -> Mapbox Tileset Conversion
 
- my strava runs provide me some elevation data as well as heartrate. I wanted to map those out. This is a basic script that converts each segment into a `lineString` with the available properties (time, elevation, heartrate, etc.). I also created a basic map to read and style the data.
+ This is a basic script that converts each segment of a GPX file into a `lineString` with the available properties (time, elevation, heartrate, etc.). I also created a basic map to read and style the data.
  
  ## usage
  

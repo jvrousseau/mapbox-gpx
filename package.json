@@ -1,5 +1,5 @@
 {
-  "name": "mapbox-strava-gpx",
+  "name": "mapbox-gpx",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
